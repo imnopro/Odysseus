@@ -1,3 +1,14 @@
+```
+ _____ ______ __   __ _____  _____  _____  _   _  _____ 
+|  _  ||  _  \\ \ / //  ___|/  ___||  ___|| | | |/  ___|
+| | | || | | | \ V / \ `--. \ `--. | |__  | | | |\ `--. 
+| | | || | | |  \ /   `--. \ `--. \|  __| | | | | `--. \
+\ \_/ /| |/ /   | |  /\__/ //\__/ /| |___ | |_| |/\__/ /
+ \___/ |___/    \_/  \____/ \____/ \____/  \___/ \____/ 
+                                                        
+                                                        
+```
+
 # Odysseus
 
 ## Overview
@@ -78,3 +89,8 @@ set payload windows/x64/meterpreter/reverse_tcp
 ### Install the MSI:
 
 Install the MSI package on a test machine to execute the payload, and then run the .exe to test functionality.
+
+
+### Closing Remarks
+
+##### As always, please use this responsibly. I am not responsible for what you do with this code, and please make sure to use on systems you have authority to audit and test. While this is a simple Reverse shell, you can also build in other exe files, and potentially use existing pieces of software to hide your malicious code. Happy Hacking!
